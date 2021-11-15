@@ -14,7 +14,7 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [authError, setAuthError] = useState("");
-  const [admin,setAdmin]=useState(false);
+  const [admin, setAdmin] = useState(false);
 
   const auth = getAuth();
 
@@ -23,9 +23,10 @@ const useFirebase = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setAuthError(" ");
-        const newUser={email}
+        const newUser = { email };
         setUser(newUser);
         saveUser(email);
+        logout();
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -47,11 +48,11 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  useEffect(()=>{
-    fetch(`http://localhost:5000/users/${user.email}`)
-    .then(res=>res.json())
-    .then(data=>setAdmin(data.admin))
-  },[user.email])
+  useEffect(() => {
+    fetch(`https://rocky-ridge-27359.herokuapp.com/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user?.email]);
 
   // observer user state
   useEffect(() => {
@@ -75,17 +76,16 @@ const useFirebase = () => {
   };
 
   //save user
-  const saveUser=(email)=>{
-    const user={email};
-    fetch('http://localhost:5000/users',{
-      method:'POST',
-      headers:{
-        'content-type':'application/json'
+  const saveUser = (email) => {
+    const user = { email };
+    fetch("https://rocky-ridge-27359.herokuapp.com/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(user)
-    })
-    .then()
-  }
+      body: JSON.stringify(user),
+    }).then();
+  };
   return {
     user,
     admin,

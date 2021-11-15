@@ -4,12 +4,9 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthProvider from "./components/contexts/AuthProvider/AuthProvider";
-import AddService from "./components/AddService/AddService";
-import AddServices from "./components/AddServices/AddServices";
 import AllProducts from "./components/AllProducts/AllProducts";
 import Purchase from "./components/Purchase/Purchase";
 import PrivateRoute from "./components/contexts/AuthProvider/PrivateRoute/PrivateRoute";
-import Orders from "./components/Orders/Orders";
 import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {

@@ -9,9 +9,9 @@ const Service=({sproduct})=>{
       <div className='mx-auto' >
       <div className="card shadow" style={{width: '23rem'}}>
         <img src={img} style={{height:'183px',width:'366px'}} alt="" />
-        <div class="card-body">
-          <h5 class="card-title">{Name}</h5>
-          <p class="card-text">
+        <div className="card-body">
+          <h5 className="card-title">{Name}</h5>
+          <p className="card-text">
            {description}
           </p>
           <Link to={`/products/${_id}`}>

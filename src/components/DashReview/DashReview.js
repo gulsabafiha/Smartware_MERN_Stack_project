@@ -2,7 +2,6 @@ import React from "react";
 import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import StarRating from 'react-bootstrap-star-rating';
 
 const DashReview = () => {
   const {
@@ -15,7 +14,7 @@ const DashReview = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/review", data)
+      .post("https://rocky-ridge-27359.herokuapp.com/review", data)
       .then((res) => {
         console.log(res);
         if (res.data.insertedID) {
@@ -24,7 +23,6 @@ const DashReview = () => {
         }
       });
   };
-
 
   return (
     <div className="content">
@@ -40,7 +38,8 @@ const DashReview = () => {
           )}
           <br />
           <input
-            {...register("rating", { required: true })} placeholder="rating"
+            {...register("rating", { required: true })}
+            placeholder="rating"
           />
           <br />
           <input {...register("description")} placeholder="short-description" />

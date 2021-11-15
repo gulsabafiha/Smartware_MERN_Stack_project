@@ -7,16 +7,16 @@ const Review = ({ review, setReviews }) => {
 
   return (
     <div>
-      <div class="col">
-        <div class="card1">
-          <div class="face front-face">
-            <div class="pt-3  name"> {email} </div>
+      <div className="col">
+        <div className="card1">
+          <div className="face front-face">
+            <div className="pt-3  name"> {email} </div>
           </div>
-          <div class="face back-face">
+          <div className="face back-face">
             {" "}
-            <span class="fas fa-quote-left"></span>
-            <div class="testimonial"> {description} </div>{" "}
-            <span class="fas fa-quote-right"></span>
+            <span className="fas fa-quote-left"></span>
+            <div className="testimonial"> {description} </div>{" "}
+            <span className="fas fa-quote-right"></span>
             <Rating
               name="simple-controlled"
               value={rating}

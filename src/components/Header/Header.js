@@ -6,13 +6,13 @@ const Header = () => {
   const {user,logout}=useAuth();
   return (
     < div className='container'>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to='/'>
             Smartware
-          </a>
+          </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav" 
@@ -20,25 +20,25 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/home">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/home">
                   Home
                 </Link>
               </li>
               
-              <li class="nav-item">
-                <Link class="nav-link active fw-bold" aria-current="page" to="/allproducts">
+              <li className="nav-item">
+                <Link className="nav-link active fw-bold" aria-current="page" to="/allproducts">
                   Explore
                 </Link>
               </li>
                
               {
-                user.email &&  <li class="nav-item">
-                <Link class="nav-link active" aria-current="page"  to="/dashboard">
+                user.email &&  <li className="nav-item">
+                <Link className="nav-link active" aria-current="page"  to="/dashboard">
                     Dashboard
                   </Link>
                   </li>
@@ -46,12 +46,12 @@ const Header = () => {
               {
                 user?.email ?
                  <li className='nav-item'>
-               <Link class="nav-link " aria-current="page" onClick={logout}>
+               <Link className="nav-link " aria-current="page" onClick={logout}>
                    Logout
                  </Link>
                </li>:
-                <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/login">
+                <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/login">
                   Login
                 </Link>
               </li>

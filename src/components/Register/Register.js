@@ -31,55 +31,55 @@ const Register = () => {
       <h1 className="m-5">Register</h1>
       {!isLoading && (
         <form onSubmit={handleLoginSubmit}>
-          <div class="m-5 row">
+          <div className="m-5 row">
             <label for="inputEmail" className="col-sm-2 col-form-label">
               Email
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="email"
                 name="email"
                 onChange={handleOnchange}
-                class="form-control"
+                className="form-control"
                 id="staticEmail"
               />
             </div>
           </div>
-          <div class="m-5 row">
+          <div className="m-5 row">
             <label for="inputPassword" className="col-sm-2 col-form-label">
               Password
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="password"
                 name="password"
                 onChange={handleOnchange}
-                class="form-control"
+                className="form-control"
                 id="inputPassword"
               />
             </div>
           </div>
-          <div class="m-5 row">
+          <div className="m-5 row">
             <label for="inputPassword" className="col-sm-2 col-form-label">
               Retype Password
             </label>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="password"
                 name="password2"
                 onChange={handleOnchange}
-                class="form-control"
+                className="form-control"
                 id="inputPassword"
               />
             </div>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <input
                 type="submit"
-                class="btn btn-outline-warning"
+                className="btn btn-outline-warning"
                 value="Register"
               />
             </div>
-            <div class="col-sm-10">
+            <div className="col-sm-10">
               <Link to="/login">
                 <button className="btn btn-link">
                   Already Registerd? Please Login
@@ -90,17 +90,17 @@ const Register = () => {
         </form>
       )}
       {isLoading && (
-        <div class="spinner-border text-warining" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-border text-warining" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       )}
       {user?.email && (
-        <div class="alert alert-warning" role="alert">
+        <div className="alert alert-warning" role="alert">
           User Created Successfully!!
         </div>
       )}
       {authError && (
-        <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <div className="alert alert-danger d-flex align-items-center" role="alert">
           <div>{authError}</div>
         </div>
       )}

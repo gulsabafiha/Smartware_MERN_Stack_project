@@ -3,13 +3,13 @@ import AllOrder from "../AllOrder/AllOrder";
 
 const ManageAllOrder = () => {
   const [orders, setOrders] = useState([]);
-  
+
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://rocky-ridge-27359.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
-  
+
   return (
     <div className="content">
       <div className="order">

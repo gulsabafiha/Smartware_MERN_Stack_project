@@ -8,11 +8,11 @@ const AllProduct=({product})=>{
         <div className="mx-auto">
       <div className="card shadow" style={{ width: "18rem" }}>
         <img src={img} class="card-img-top"  alt="" />
-        <div class="card-body">
-          <h5 class="card-title">{Name}</h5>
-          <h6 class="card-title">{Price}</h6>
+        <div className="card-body">
+          <h5 className="card-title">{Name}</h5>
+          <h6 className="card-title">{Price}</h6>
           
-          <p class="card-text">{description}</p>
+          <p className="card-text">{description}</p>
           <Link to={`/products/${_id}`}>
             <button className="btn btn-outline-warning">Buy Now</button>
           </Link>

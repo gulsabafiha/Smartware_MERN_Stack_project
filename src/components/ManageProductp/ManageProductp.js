@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
-const ManageProductp = ({ product,setProducts }) => {
+const ManageProductp = ({ product, setProducts }) => {
   const { description, Name, _id, Price } = product;
   const { serviceId } = useParams();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${serviceId}`)
+    fetch(`https://rocky-ridge-27359.herokuapp.com/products/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -15,7 +15,7 @@ const ManageProductp = ({ product,setProducts }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/products/${_id}`;
+      const url = `https://rocky-ridge-27359.herokuapp.com/products/${_id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -31,8 +31,8 @@ const ManageProductp = ({ product,setProducts }) => {
   };
 
   return (
-    <div className='content'>
-      <table class="table">
+    <div className="content">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Name</th>
@@ -46,12 +46,14 @@ const ManageProductp = ({ product,setProducts }) => {
             <td>{Name}</td>
             <td>{Price}</td>
             <td>{description}</td>
-            <td><button
-              className="btn btn-outline-warning"
-              onClick={() => handleDelete(_id)}
-            >
-              Delete
-            </button></td>
+            <td>
+              <button
+                className="btn btn-outline-warning"
+                onClick={() => handleDelete(_id)}
+              >
+                Delete
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

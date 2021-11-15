@@ -23,16 +23,17 @@ const Purchase = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${productId}`)
+    fetch(`https://rocky-ridge-27359.herokuapp.com/products/${productId}`)
       .then((res) => res.json())
       .then((data) => {
-        setServices(data)});
+        setServices(data);
+      });
   }, []);
 
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("http://localhost:5000/orders", data)
+      .post("https://rocky-ridge-27359.herokuapp.com/orders", data)
       .then((res) => {
         console.log(res);
         if (res.data.insertedID) {
@@ -55,10 +56,9 @@ const Purchase = () => {
 
         <div className="form-container">
           <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
-           
             <input defaultValue={services.Name} {...register("Servicename")} />
             <input defaultValue={services.Price} {...register("price")} />
-            <input defaultValue={services.img} {...register("img")}  />
+            <input defaultValue={services.img} {...register("img")} />
             <input
               defaultValue={user.email}
               {...register("email", { required: true })}

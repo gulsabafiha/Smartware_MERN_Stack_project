@@ -9,21 +9,21 @@ const Order = ({ order, orders, setOrders }) => {
   const [services, setServices] = useState([]);
   console.log(services.Name);
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${serviceId}`)
+    fetch(`https://rocky-ridge-27359.herokuapp.com/products/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, []);
+  });
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orders/${_id}`;
+      const url = `https://rocky-ridge-27359.herokuapp.com/orders/${_id}`;
       fetch(url, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log('hitted',data)
+          console.log("hitted", data);
           if (data.deletedCount) {
             alert("deleted succesfully");
             const reamaining = orders.filter((service) => service._id === id);
@@ -34,10 +34,10 @@ const Order = ({ order, orders, setOrders }) => {
   };
 
   return (
-    <div class="card" style={{ width: "18rem" }}>
+    <div className="card" style={{ width: "18rem" }}>
       <div>
-        <h5 class="card-text">{service}</h5>
-        <h6 class="card-text">{name}</h6>
+        <h5 className="card-text">{service}</h5>
+        <h6 className="card-text">{name}</h6>
         <h6>{email}</h6> <br />
         <button
           className="btn btn-outline-warning"

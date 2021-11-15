@@ -4,11 +4,9 @@ import Orders from "../Orders/Orders";
 import Pay from "../Pay/Pay";
 import "./Dashboard.css";
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  useParams,
   useRouteMatch,
 } from "react-router-dom";
 import DashHome from "../DashHome/DashHome";
@@ -21,12 +19,12 @@ import ManageProduct from "../ManageProduct/ManageProduct";
 
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
-  const { user, logout, admin } = useAuth();
+  const {  logout, admin } = useAuth();
   return (
     <div>
       <Header></Header>
-      <div class="sidebar">
-        <Link class="active" to={`${url}`}>
+      <div className="sidebar">
+        <Link className="active" to={`${url}`}>
           Dashboard
         </Link>
 
@@ -34,41 +32,41 @@ const Dashboard = () => {
           <div>
             {" "}
             <Link
-              class="nav-link"
+              className="nav-link"
               aria-current="page"
               to={`${url}/manageallorders`}
             >
               Manage All Orders
             </Link>
-            <Link class="nav-link" aria-current="page" to={`${url}/addproduct`}>
+            <Link className="nav-link" aria-current="page" to={`${url}/addproduct`}>
               Add Product
             </Link>
             <Link
-              class="nav-link"
+              className="nav-link"
               aria-current="page"
               to={`${url}/manageproduct`}
             >
               Manage Products
             </Link>
-            <Link class="nav-link" aria-current="page" to={`${url}/makeadmin`}>
+            <Link className="nav-link" aria-current="page" to={`${url}/makeadmin`}>
               Make Admin
             </Link>
           </div>
         ) : (
           <div>
-            <Link class="nav-link" aria-current="page" to={`${url}/orders`}>
+            <Link className="nav-link" aria-current="page" to={`${url}/orders`}>
               My Order
             </Link>
-            <Link class="nav-link" aria-current="page" to={`${url}/pay`}>
+            <Link className="nav-link" aria-current="page" to={`${url}/pay`}>
               Pay
             </Link>
-            <Link class="nav-link" aria-current="page" to={`${url}/review`}>
+            <Link className="nav-link" aria-current="page" to={`${url}/review`}>
               Review
             </Link>
           </div>
         )}
 
-        <Link class="nav-link" aria-current="page" onClick={logout}>
+        <Link className="nav-link" aria-current="page" onClick={logout}>
           Logout
         </Link>
       </div>

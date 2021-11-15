@@ -8,12 +8,14 @@ import Footer from "../Footer/Footer";
 const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/products", data).then((res) => {
-      if (res.data.insertedID) {
-        alert("Added service successfully!");
-        reset();
-      }
-    });
+    axios
+      .post("https://rocky-ridge-27359.herokuapp.com/products", data)
+      .then((res) => {
+        if (res.data.insertedID) {
+          alert("Added service successfully!");
+          reset();
+        }
+      });
   };
 
   return (

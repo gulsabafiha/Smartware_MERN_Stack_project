@@ -8,14 +8,13 @@ const Orders = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`https://rocky-ridge-27359.herokuapp.com/orders?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, []);
+  }, [user.email]);
 
   return (
-    <div className='content'>
-        
+    <div className="content">
       <div className="order">
         {orders.map((order) => (
           <Order
@@ -26,7 +25,6 @@ const Orders = () => {
           ></Order>
         ))}
       </div>
-   
     </div>
   );
 };
