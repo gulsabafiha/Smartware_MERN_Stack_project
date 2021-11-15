@@ -9,13 +9,13 @@ const Header = () => {
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            SunglassWare
+            Smartware
           </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            data-bs-target="#navbarNav" 
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -31,14 +31,14 @@ const Header = () => {
               </li>
               
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/allproducts">
-                  All Products
+                <Link class="nav-link active fw-bold" aria-current="page" to="/allproducts">
+                  Explore
                 </Link>
               </li>
                
               {
                 user.email &&  <li class="nav-item">
-                <Link class="nav-link" aria-current="page"  to="/dashboard">
+                <Link class="nav-link active" aria-current="page"  to="/dashboard">
                     Dashboard
                   </Link>
                   </li>
@@ -46,12 +46,12 @@ const Header = () => {
               {
                 user?.email ?
                  <li className='nav-item'>
-               <Link class="nav-link" aria-current="page" onClick={logout}>
+               <Link class="nav-link " aria-current="page" onClick={logout}>
                    Logout
                  </Link>
                </li>:
                 <li class="nav-item">
-              <Link class="nav-link" aria-current="page" to="/login">
+              <Link class="nav-link active" aria-current="page" to="/login">
                   Login
                 </Link>
               </li>

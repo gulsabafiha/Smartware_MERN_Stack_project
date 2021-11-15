@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import useAuth from "../hooks/useAuth";
 
 const Register = () => {
@@ -25,6 +27,7 @@ const Register = () => {
 
   return (
     <div>
+      <Header></Header>
       <h1 className="m-5">Register</h1>
       {!isLoading && (
         <form onSubmit={handleLoginSubmit}>
@@ -101,6 +104,7 @@ const Register = () => {
           <div>{authError}</div>
         </div>
       )}
+      <Footer></Footer>
     </div>
   );
 };

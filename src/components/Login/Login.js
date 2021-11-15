@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link,useLocation,useHistory } from "react-router-dom";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import useAuth from "../hooks/useAuth";
 
 const Login = () => {
@@ -22,6 +24,7 @@ const Login = () => {
   };
   return (
     <div>
+      <Header></Header>
       <h1 className="m-5">Login</h1>
       <form onSubmit={handleLoginSubmit}>
         <div class="m-5 row">
@@ -83,6 +86,7 @@ const Login = () => {
           <div>{authError}</div>
         </div>
       )}
+      <Footer></Footer>
     </div>
   );
 };

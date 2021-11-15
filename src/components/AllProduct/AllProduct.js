@@ -14,7 +14,7 @@ const AllProduct=({product})=>{
           
           <p class="card-text">{description}</p>
           <Link to={`/products/${_id}`}>
-            <button className="btn btn-outline-warning">See Detail</button>
+            <button className="btn btn-outline-warning">Buy Now</button>
           </Link>
         </div>
       </div>

@@ -12,7 +12,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div>
+    <div className='mb-5' >
       <h2 className="m-5">Our Products</h2>
       <div className="service-container ">
         {products?.slice(0,6).map((sproduct) => (

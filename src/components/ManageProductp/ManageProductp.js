@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
-const ManageProductp = ({ product }) => {
+const ManageProductp = ({ product,setProducts }) => {
   const { description, Name, _id, Price } = product;
   const { serviceId } = useParams();
   const [orders, setOrders] = useState([]);
@@ -21,11 +21,10 @@ const ManageProductp = ({ product }) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log('hitted',data.deletedCount)
           if (data.deletedCount) {
             alert("deleted succesfully");
             const reamaining = orders.filter((service) => service._id !== id);
-            setOrders(reamaining);
+            setProducts(reamaining);
           }
         });
     }

@@ -39,7 +39,9 @@ const DashReview = () => {
             <span className="error">This field is required</span>
           )}
           <br />
-          <input id="input-id" name="input-name" type="number" class="rating" min='1' max='10' step='2' data-size="lg" data-rtl="true"/>
+          <input
+            {...register("rating", { required: true })} placeholder="rating"
+          />
           <br />
           <input {...register("description")} placeholder="short-description" />
           <input className="mt-3" type="Submit" />

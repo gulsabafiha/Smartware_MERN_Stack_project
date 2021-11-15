@@ -11,3 +11,13 @@
 .news-content{
     padding: 15rem;
 }
+@media screen and (max-width: 767px){
+    .news-bg
+    {
+       background-size: cover;
+       margin-left: 3rem;
+    }
+     .news-content{
+         padding: 8rem;
+     }
+ }

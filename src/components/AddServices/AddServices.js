@@ -9,7 +9,7 @@ import './AddServices.css';
 const AddServices=()=>{
     const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/product", data).then((res) => {
+    axios.post("http://localhost:5000/products", data).then((res) => {
       if (res.data.insertedID) {
         alert("Added service successfully!");
         reset();

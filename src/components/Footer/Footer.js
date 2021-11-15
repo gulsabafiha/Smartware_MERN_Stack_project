@@ -13,12 +13,12 @@ const Footer=()=>{
             <div>
                 <h3>POPULAR NEWS</h3>
                 <p>Your Personal Guide to 5 Best Places to Visit on Earth</p>
-                <p>Top 10 Hotels: Rating by Wonder Tour Travel Experts</p>
+                <p>Top 10 Hotels: Rating by Wonder SmartWare</p>
             </div>
             <div>
                 
                 <p>© 2021 Wonder Tour. All Rights Reserved. Design by TemplateMonster</p>
-                <p>Top 10 Hotels: Rating by Wonder Tour Travel Experts</p>
+                <p>Top 10 Hotels: Rating by Wonder SmartWare.</p>
             </div>
             
         </div>

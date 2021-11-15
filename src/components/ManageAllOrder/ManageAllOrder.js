@@ -3,12 +3,13 @@ import AllOrder from "../AllOrder/AllOrder";
 
 const ManageAllOrder = () => {
   const [orders, setOrders] = useState([]);
+  
   useEffect(() => {
     fetch(`http://localhost:5000/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
-  console.log("getting", orders);
+  
   return (
     <div className="content">
       <div className="order">
