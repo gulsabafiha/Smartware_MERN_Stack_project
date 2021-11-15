@@ -16,6 +16,10 @@ const Banner = () => {
               className="d-block w-100"
               alt="..."
             />
+            <div className="carousel-caption d-none d-md-block">
+              <h1>Amazing Frames And Lenses</h1>
+              <button className="btn btn-outline-warning">Shop Now</button>
+            </div>
           </div>
           <div className="carousel-item">
             <img
@@ -24,9 +28,9 @@ const Banner = () => {
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
-        <h5>Amazing Frames And Lenses</h5>
-        <button className='btn btn-outline-warning'>Shop Now</button>
-      </div>
+              <h1>Amazing Frames And Lenses</h1>
+              <button className="btn btn-outline-warning">Shop Now</button>
+            </div>
           </div>
         </div>
         <button
@@ -35,7 +39,10 @@ const Banner = () => {
           data-bs-target="#carouselExampleControls"
           data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button
@@ -44,7 +51,10 @@ const Banner = () => {
           data-bs-target="#carouselExampleControls"
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>
