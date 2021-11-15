@@ -1,0 +1,10 @@
+.banner-bg{
+   background-image: url('http://wordpress.templatemela.com/woo/WCM06/WCM060136/wp-content/uploads/2020/10/Main-Banner-01-1.jpg');
+   background-repeat: no-repeat;
+}
+
+.banner-content h1{
+    font-size: 5rem;
+    padding: 14rem;
+    color: rgb(30, 40, 51);
+}
