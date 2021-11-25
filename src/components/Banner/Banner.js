@@ -1,7 +1,9 @@
 import React from "react";
 import "./Banner.css";
 
+
 const Banner = () => {
+ 
   return (
     <div>
       <div
@@ -11,8 +13,15 @@ const Banner = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
+            <img src='https://i.ibb.co/VSj07Kh/f-01.jpg' className="d-block w-100" alt="..." />
+            <div className="carousel-caption d-none d-md-block">
+              <h1>Amazing Frames And Lenses</h1>
+              <button className="btn btn-outline-warning">Shop Now</button>
+            </div>
+          </div>
+          <div className="carousel-item">
             <img
-              src="http://wordpress.templatemela.com/woo/WCM06/WCM060136/wp-content/uploads/2020/10/Main-Banner-01-1.jpg"
+              src="https://i.ibb.co/6Ngm1GK/13-04.jpg"
               className="d-block w-100"
               alt="..."
             />
@@ -23,7 +32,7 @@ const Banner = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="http://wordpress.templatemela.com/woo/WCM06/WCM060136/wp-content/uploads/2020/10/Main-Banner-02.jpg"
+              src="https://www.longeoptical.com/wp-content/uploads/2017/09/womens-eyeglasses-banner.jpg"
               className="d-block w-100"
               alt="..."
             />

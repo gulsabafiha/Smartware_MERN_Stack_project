@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Service.css';
 
 
 const Service=({sproduct})=>{
@@ -7,7 +8,7 @@ const Service=({sproduct})=>{
 
     return(
       <div className='mx-auto' >
-      <div className="card shadow" style={{width: '23rem'}}>
+      <div className="card shadow rounded-3" style={{width: '23rem'}}>
         <img src={img} style={{height:'183px',width:'366px'}} alt="" />
         <div className="card-body">
           <h5 className="card-title">{Name}</h5>

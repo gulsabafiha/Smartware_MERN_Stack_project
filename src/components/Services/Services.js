@@ -13,7 +13,7 @@ const Services = () => {
 
   return (
     <div className="mb-5">
-      <h2 className="m-5">Our Products</h2>
+      <h2 className="m-5 text-center text-warning fs-1" >Our Products</h2>
       <div className="service-container ">
         {products?.slice(0, 6).map((sproduct) => (
           <Service key={sproduct._id} sproduct={sproduct}></Service>

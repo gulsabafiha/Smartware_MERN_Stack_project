@@ -6,8 +6,8 @@ const AllProduct=({product})=>{
 
     return(
         <div className="mx-auto">
-      <div className="card shadow" style={{ width: "18rem" }}>
-        <img src={img} class="card-img-top"  alt="" />
+      <div className="card shadow" style={{ width: "24rem" }}>
+        <img src={img}  style={{height:'183px',width:'366px'}}  alt="" />
         <div className="card-body">
           <h5 className="card-title">{Name}</h5>
           <h6 className="card-title">{Price}</h6>
