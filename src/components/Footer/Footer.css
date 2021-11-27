@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     padding: 5rem;
+    background-color: gray;
+    color: rgb(224, 213, 213);
 }
 @media screen and (max-width: 767px){
     .main-container{

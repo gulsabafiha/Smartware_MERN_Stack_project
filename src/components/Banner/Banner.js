@@ -1,9 +1,7 @@
 import React from "react";
 import "./Banner.css";
 
-
 const Banner = () => {
- 
   return (
     <div>
       <div
@@ -13,7 +11,11 @@ const Banner = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src='https://i.ibb.co/VSj07Kh/f-01.jpg' className="d-block w-100" alt="..." />
+            <img
+              src="https://www.looks4you.com/wp-content/uploads/2018/11/360_banner5-1024x404.jpg"
+              className="w-100 img-fluid"
+              alt="..."
+            />
             <div className="carousel-caption d-none d-md-block">
               <h1>Amazing Frames And Lenses</h1>
               <button className="btn btn-outline-warning">Shop Now</button>
@@ -21,7 +23,7 @@ const Banner = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://i.ibb.co/6Ngm1GK/13-04.jpg"
+              src="http://www.sunglassreplicas.com/v/vspfiles/templates/sunglass/images/banner5.jpg"
               className="d-block w-100"
               alt="..."
             />
@@ -32,7 +34,7 @@ const Banner = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://www.longeoptical.com/wp-content/uploads/2017/09/womens-eyeglasses-banner.jpg"
+              src="http://cdn.shopify.com/s/files/1/0749/2027/collections/arc.com-collection-sunscreen_1200x630.jpg?v=1615929458"
               className="d-block w-100"
               alt="..."
             />

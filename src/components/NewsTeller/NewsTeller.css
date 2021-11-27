@@ -1,23 +1,24 @@
-.news-bg{
-    background-image: url('http://wordpress.templatemela.com/woo/WCM06/WCM060136/wp-content/uploads/2020/12/Newslatter-bg-Parallax.jpg');
-    background-color: rgba(0, 0, 0, 0.219);
-    background-blend-mode: multiply;
-    text-align: center;
+.news-bg {
+  background-image: url("https://www.longeoptical.com/wp-content/uploads/2017/09/womens-eyeglasses-banner.jpg");
+  background-color: rgba(0, 0, 0, 0.219);
+  background-blend-mode: multiply;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.news-input{
-   padding-left: 48rem;
+.news-input {
+  padding-left: 48rem;
   margin-top: 10rem;
 }
-.news-content{
-    padding: 15rem;
+.news-content {
+  padding: 15rem;
 }
-@media screen and (max-width: 767px){
-    .news-bg
-    {
-       background-size: cover;
-       margin-left: 3rem;
-    }
-     .news-content{
-         padding: 8rem;
-     }
- }
+@media screen and (max-width: 767px) {
+  .news-bg {
+    background-size: cover;
+    margin-left: 3rem;
+  }
+  .news-content {
+    padding: 8rem;
+  }
+}
